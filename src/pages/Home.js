@@ -15,7 +15,7 @@ const Home = () => {
     <Wrapper>
       <Header>예비 멍집사 판별기</Header>
       <Contents>
-        <Title>나에게 맞는 주인님은?</Title>
+        <Title>나와 찰떡궁합인 반려견은?</Title>
         <LogoImage>
           <img src={MungImage} alt="mungImage" width={350} />
         </LogoImage>
