@@ -1,0 +1,13 @@
+.App {
+  font-family: "Cafe24Ssurround", "Cafe24SsurroundAir";
+}
+
+@font-face {
+  font-family: "Cafe24Ssurround";
+  src: url(/src/assets/fonts/Cafe24Ssurround.ttf);
+}
+
+@font-face {
+  font-family: "Cafe24SsurroundAir";
+  src: url(/src/assets/fonts/Cafe24SsurroundAir.ttf);
+}
