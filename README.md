@@ -1,10 +1,6 @@
-# Getting Started with Create React App
+# MUNGBTI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+예비 멍집사와 멍멍이의 궁합을 알아보는 mbti test
 
 ### `npm start`
 
