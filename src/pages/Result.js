@@ -11,7 +11,6 @@ const Result = () => {
   const mbti = searchParams.get("mbti");
   //최종적으로 도출한 결과 객체
   const [resultData, setResultData] = useState({});
-  console.log(mbti);
 
   useEffect(() => {
     const result = ResultData.find((s) => s.best === mbti);
@@ -28,7 +27,7 @@ const Result = () => {
           {resultData.name}
         </SubTitle>
         <DogImage>
-          <img src={resultData.image} alt="mungImage" width={200} />
+          <img src={resultData.image} alt="결과 이미지" width={200} />
         </DogImage>
         <Desc>
           <p>{resultData.descDog}와</p>
@@ -46,6 +45,7 @@ export default Result;
 const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
+  background-color: #e5ded4;
 `;
 
 const Header = styled.div`

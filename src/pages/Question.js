@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, ProgressBar } from "react-bootstrap";
 import { createSearchParams, useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { StyledContainer } from "../App";
 import { QuestionData } from "../assets/data/questiondata";
 
 const Question = () => {
@@ -45,53 +46,89 @@ const Question = () => {
   };
 
   return (
-    <Wrapper>
+    <StyledContainer>
       <ProgressBar
         striped
         variant="danger"
         now={(questionNo / QuestionData.length) * 100}
       />
-      <Title>{QuestionData[questionNo].title}</Title>
+      <Title>
+        {QuestionData[questionNo].title.split("\n").map((line) => {
+          return (
+            <p>
+              {line}
+              <br />
+            </p>
+          );
+        })}
+      </Title>
       <ButtonGroup>
         <Button
           onClick={() => handelClickBtn(1, QuestionData[questionNo].type)}
-          style={{ width: "40%", minHeight: "200px", fontSize: "15px" }}
+          style={{
+            width: "80%",
+            minHeight: "110px",
+            fontSize: "18px",
+            marginTop: "20px",
+            padding: "20px",
+          }}
         >
-          {QuestionData[questionNo].answera}
+          {QuestionData[questionNo].answera.split("\n").map((line) => {
+            return (
+              <p>
+                {line}
+                <br />
+              </p>
+            );
+          })}
         </Button>
         <Button
           onClick={() => handelClickBtn(0, QuestionData[questionNo].type)}
           style={{
-            width: "40%",
-            minHeight: "200px",
-            fontSize: "15px",
-            marginLeft: "20px",
+            width: "80%",
+            minHeight: "110px",
+            fontSize: "18px",
+            marginTop: "20px",
+            backgroundColor: "purple",
+            border: "0px",
+            padding: "20px",
           }}
         >
-          {QuestionData[questionNo].answerb}
+          {QuestionData[questionNo].answerb.split("\n").map((line) => {
+            return (
+              <span>
+                {line}
+                <br />
+              </span>
+            );
+          })}
         </Button>
       </ButtonGroup>
-    </Wrapper>
+    </StyledContainer>
   );
 };
 
 export default Question;
 
-const Wrapper = styled.div`
-  height: 100vh;
-  width: 100%;
-`;
-
 const Title = styled.div`
-  font-size: 20pt;
+  font-size: 15pt;
   text-align: center;
-  font-family: "Cafe24SsurroundAir";
+  font-family: "NanumSquareNeo-Variable";
+  margin-top: 20px;
+
+  p {
+    margin: 0;
+  }
 `;
 
 const ButtonGroup = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: "Cafe24SsurroundAir";
+  font-family: "NanumSquareNeo-Variable";
+
+  p {
+    margin: 0;
+  }
 `;

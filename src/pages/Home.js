@@ -2,8 +2,9 @@ import React from "react";
 //css-in-js
 import styled from "styled-components";
 import MungImage from "../assets/mungmain.png";
-import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
+import { StyledContainer, StyledBtn } from "../App";
+import { FaArrowRight } from "react-icons/fa";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -12,33 +13,71 @@ const Home = () => {
   };
 
   return (
-    <Wrapper>
-      <Header>예비 멍집사 판별기</Header>
+    <StyledContainer>
+      <Header>
+        <div>
+          <p style={{ marginTop: "20px" }}>나와</p>
+          <p className="dotPoint">찰떡궁합</p>
+        </div>
+        <div>
+          <p className="colorPoint">반려견</p>
+          <p>은?</p>
+        </div>
+      </Header>
       <Contents>
-        <Title>나와 찰떡궁합인 반려견은?</Title>
         <LogoImage>
-          <img src={MungImage} alt="mungImage" width={350} />
+          <img src={MungImage} alt="mungImage" width={250} />
         </LogoImage>
-        <Desc>MBTI를 기반으로 하는 나와 잘 맞는 멍멍이 찾기 !</Desc>
-        <Button onClick={handleClickBtn}>테스트 시작하기</Button>
+        <Desc>
+          <p>MBTI 기반으로</p>
+          <p>나와 어울리는 반려견 찾기 🐶</p>
+        </Desc>
+        <StyledBtn onClick={handleClickBtn}>
+          시작하기 <FaArrowRight />
+        </StyledBtn>
       </Contents>
-    </Wrapper>
+    </StyledContainer>
   );
 };
 
 export default Home;
 
-const Wrapper = styled.div`
-  height: 100vh;
-  width: 100%;
-`;
-
 const Header = styled.div`
-  font-size: 48px;
+  font-size: 1.35rem;
+  font-family: "Cafe24Ssurround";
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Cafe24Ssurround";
+  margin-top: 15px;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    min-width: 300px;
+  }
+
+  .dotPoint {
+    text-emphasis: "♥︎" #ff935c;
+    font-size: 1.55rem;
+    margin-left: 10px;
+  }
+
+  .colorPoint {
+    color: #ff935c;
+    font-size: 1.6rem;
+    margin-right: 3px;
+  }
+`;
+
+const LogoImage = styled.div`
+  margin-top: 30px;
 `;
 
 const Contents = styled.div`
@@ -46,20 +85,17 @@ const Contents = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Cafe24SsurroundAir";
-`;
-
-const Title = styled.div`
-  font-size: 30pt;
-  margin-top: 40px;
-`;
-
-const LogoImage = styled.div`
-  margin-top: 40px;
+  font-family: "NanumSquareNeo-Variable";
 `;
 
 const Desc = styled.div`
-  font-size: 16pt;
-  margin-top: 40px;
-  margin-bottom: 30px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  margin: 30px;
+  text-align: center;
+  min-width: 300px;
+
+  p {
+    margin: 0;
+  }
 `;
