@@ -53,9 +53,9 @@ const Question = () => {
         now={(questionNo / QuestionData.length) * 100}
       />
       <Title>
-        {QuestionData[questionNo].title.split("\n").map((line) => {
+        {QuestionData[questionNo].title.split("\n").map((line, i) => {
           return (
-            <p>
+            <p key={i}>
               {line}
               <br />
             </p>
@@ -67,9 +67,9 @@ const Question = () => {
           className="answerBtn"
           onClick={() => handelClickBtn(1, QuestionData[questionNo].type)}
         >
-          {QuestionData[questionNo].answera.split("\n").map((line) => {
+          {QuestionData[questionNo].answera.split("\n").map((line, i) => {
             return (
-              <p>
+              <p key={i}>
                 {line}
                 <br />
               </p>
@@ -80,12 +80,12 @@ const Question = () => {
           className="answerBtn"
           onClick={() => handelClickBtn(0, QuestionData[questionNo].type)}
         >
-          {QuestionData[questionNo].answerb.split("\n").map((line) => {
+          {QuestionData[questionNo].answerb.split("\n").map((line, i) => {
             return (
-              <span>
+              <p key={i}>
                 {line}
                 <br />
-              </span>
+              </p>
             );
           })}
         </Button>
@@ -102,6 +102,10 @@ const Title = styled.div`
   font-family: "NanumSquareNeo-Variable";
   margin-top: 50px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   p {
     margin: 0;
