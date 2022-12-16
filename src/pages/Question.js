@@ -49,7 +49,7 @@ const Question = () => {
     <StyledContainer>
       <ProgressBar
         striped
-        variant="danger"
+        variant="warning"
         now={(questionNo / QuestionData.length) * 100}
       />
       <Title>
@@ -64,14 +64,8 @@ const Question = () => {
       </Title>
       <ButtonGroup>
         <Button
+          className="answerBtn"
           onClick={() => handelClickBtn(1, QuestionData[questionNo].type)}
-          style={{
-            width: "80%",
-            minHeight: "110px",
-            fontSize: "18px",
-            marginTop: "20px",
-            padding: "20px",
-          }}
         >
           {QuestionData[questionNo].answera.split("\n").map((line) => {
             return (
@@ -83,16 +77,8 @@ const Question = () => {
           })}
         </Button>
         <Button
+          className="answerBtn"
           onClick={() => handelClickBtn(0, QuestionData[questionNo].type)}
-          style={{
-            width: "80%",
-            minHeight: "110px",
-            fontSize: "18px",
-            marginTop: "20px",
-            backgroundColor: "purple",
-            border: "0px",
-            padding: "20px",
-          }}
         >
           {QuestionData[questionNo].answerb.split("\n").map((line) => {
             return (
@@ -114,7 +100,8 @@ const Title = styled.div`
   font-size: 15pt;
   text-align: center;
   font-family: "NanumSquareNeo-Variable";
-  margin-top: 20px;
+  margin-top: 50px;
+  margin-bottom: 20px;
 
   p {
     margin: 0;
@@ -127,6 +114,23 @@ const ButtonGroup = styled.div`
   align-items: center;
   justify-content: center;
   font-family: "NanumSquareNeo-Variable";
+
+  .answerBtn {
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ff935c;
+    border: none;
+    min-width: 90%;
+
+    &:hover {
+      background-color: #dc5353;
+    }
+
+    &:active {
+      background-color: #dc5353;
+    }
+  }
 
   p {
     margin: 0;

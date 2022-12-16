@@ -40,13 +40,14 @@ const StyledWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 0 20px;
+  padding: 0 10px;
 `;
 
 export const StyledContainer = styled.div`
   width: 100%;
   min-width: 300px;
   max-width: 600px;
+  height: 600px;
   padding: 50px;
   background-color: #fff;
   border-radius: 10px;
