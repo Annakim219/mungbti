@@ -132,7 +132,7 @@ const ButtonGroup = styled.div`
     }
 
     &:active {
-      background-color: #dc5353;
+      background-color: #ff935c;
     }
   }
 
