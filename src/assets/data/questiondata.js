@@ -23,7 +23,7 @@ export const QuestionData = [
   },
   {
     id: 4,
-    title: "강아지에 대한 모든 것이 궁금해 !\n 어떻게 정보를 찾아볼까?",
+    title: "강아지에 대한 모든 것이 궁금해!\n 어떻게 정보를 찾아볼까?",
     answera:
       "이 구역의 인싸는 나!\n 반려견 커뮤니티에 가입해 집사들과 소통한다. ",
     answerb:
@@ -39,7 +39,7 @@ export const QuestionData = [
   },
   {
     id: 6,
-    title: "오늘 강아지 산책 어디로 가볼까?",
+    title: "강아지 산책 어디로 가볼까?",
     answera: "계획이 중요해!\n시간, 루트, 횟수 등을 미리 정해 실천한다.",
     answerb: "느낌이 중요해!\n그날그날 마음이 끌리는 곳으로 발길을 향한다.",
     type: "JP",
@@ -79,7 +79,7 @@ export const QuestionData = [
 
   {
     id: 11,
-    title: "오늘은 멍집사의 월급날!\n강아지에게 어떤 선물을 해줄까?",
+    title: "오늘은 멍집사의 월급날!\n강아지 선물을 사볼까?",
     answera:
       "그동안 눈여겨본 장난감과 반려용품을 일목요연하게\n정리해두고 필요한 것부터 비교해 구입한다.",
     answerb:

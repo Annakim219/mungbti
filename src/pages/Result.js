@@ -18,12 +18,24 @@ const Result = () => {
   }, [mbti]);
 
   return (
-    <StyledContainer>
+    <StyledContainer padding={"50px 10px"}>
       <Header>나와 찰떡궁합인 반려견은?</Header>
       <Title>
-        <p>{resultData.best}</p>
-        <BsFillSuitHeartFill className="heartIcon" />
-        <p className="dogName">{resultData.name}</p>
+        {resultData.name && resultData.name.length < 6 ? (
+          <>
+            <p className="mbitName">{resultData.best}</p>
+            <BsFillSuitHeartFill className="heartIcon" />
+            <p className="dogName">{resultData.name}</p>
+          </>
+        ) : (
+          <div className="longDogName">
+            <div>
+              <p className="mbitName">{resultData.best}</p>
+              <BsFillSuitHeartFill className="heartIcon" />
+            </div>
+            <p className="dogName">{resultData.name}</p>
+          </div>
+        )}
       </Title>
       <DogImage>
         <div className="imageCircle">
@@ -34,6 +46,8 @@ const Result = () => {
         <Desc>
           <div>
             <p>{resultData.descDog}</p>
+          </div>
+          <div>
             <p className="pointText">{resultData.name}</p>
             <p>와</p>
           </div>
@@ -47,7 +61,6 @@ const Result = () => {
             <p>입니다.</p>
           </div>
         </Desc>
-        {/* <StyledBtn onClick={() => navigate("/")}>테스트 다시하기</StyledBtn> */}
       </Contents>
     </StyledContainer>
   );
@@ -78,18 +91,34 @@ const Title = styled.div`
   justify-content: center;
   align-items: center;
   font-family: "Cafe24Ssurround";
-  margin-bottom: 10px;
+  margin: 10px auto;
 
   p {
-    margin: 0 20px;
+    margin: 0 10px;
   }
 
   .heartIcon {
     color: #dc5353;
   }
-
+  .mbitName {
+    font-size: 1rem;
+  }
   .dogName {
     font-size: 1.2rem;
+  }
+
+  .longDogName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
   }
 `;
 
@@ -162,7 +191,7 @@ const Contents = styled.div`
 
 const Desc = styled.div`
   font-family: "NanumSquareNeo-Variable";
-  font-size: 0.6rem;
+  font-size: 0.55rem;
   text-align: center;
   margin-top: 20px;
 
@@ -177,7 +206,7 @@ const Desc = styled.div`
     align-items: center;
 
     .pointText {
-      font-size: 0.65rem;
+      font-size: 0.6rem;
       font-weight: 700;
       margin-left: 5px;
       color: #dc5353;

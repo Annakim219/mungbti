@@ -48,7 +48,7 @@ export const StyledContainer = styled.div`
   min-width: 300px;
   max-width: 600px;
   height: 600px;
-  padding: 50px;
+  padding: ${({ padding }) => padding};
   background-color: #fff;
   border-radius: 10px;
   box-sizing: border-box;
@@ -69,10 +69,4 @@ export const StyledBtn = styled.button`
   padding: 0;
   cursor: pointer;
   box-sizing: border-box;
-
-  &:disabled {
-    cursor: default;
-    opacity: 0.5;
-    background: #555;
-  }
 `;

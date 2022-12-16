@@ -46,7 +46,7 @@ const Question = () => {
   };
 
   return (
-    <StyledContainer>
+    <StyledContainer padding={"50px"}>
       <ProgressBar
         striped
         variant="warning"

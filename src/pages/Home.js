@@ -13,7 +13,7 @@ const Home = () => {
   };
 
   return (
-    <StyledContainer>
+    <StyledContainer padding={"50px"}>
       <Header>
         <div>
           <p style={{ marginTop: "20px" }}>나와</p>
