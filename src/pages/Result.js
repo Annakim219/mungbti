@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 //css-in-js
 import styled from "styled-components";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { ResultData } from "../assets/data/resultData";
-import { StyledContainer, StyledBtn } from "../App";
+import { StyledContainer } from "../App";
 import { BsFillSuitHeartFill } from "react-icons/bs";
 
 const Result = () => {
-  const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const mbti = searchParams.get("mbti").toUpperCase();
   //최종적으로 도출한 결과 객체
