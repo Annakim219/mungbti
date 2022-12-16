@@ -128,11 +128,11 @@ const ButtonGroup = styled.div`
     min-width: 90%;
 
     &:hover {
-      background-color: #dc5353;
+      background-color: #ff935c;
     }
 
     &:active {
-      background-color: #ff935c;
+      background-color: #dc5353;
     }
   }
 
