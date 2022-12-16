@@ -114,67 +114,41 @@ const DogImage = styled.div`
   img {
     margin-top: 10px;
     transform-origin: top;
-    animation-name: hatch;
-    -webkit-animation-name: hatch;
+    animation-name: tossing;
+    -webkit-animation-name: tossing;
 
-    animation-duration: 2s;
-    -webkit-animation-duration: 2s;
+    animation-duration: 2.5s;
+    -webkit-animation-duration: 2.5s;
 
-    animation-timing-function: ease-in-out;
-    -webkit-animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
 
     transform-origin: 50% 100%;
     -ms-transform-origin: 50% 100%;
     -webkit-transform-origin: 50% 100%;
-
-    visibility: visible !important;
   }
 
-  @keyframes hatch {
+  @keyframes tossing {
     0% {
-      transform: rotate(0deg) scaleY(0.6);
-    }
-    20% {
-      transform: rotate(-2deg) scaleY(1.05);
-    }
-    35% {
-      transform: rotate(2deg) scaleY(1);
+      transform: rotate(-4deg);
     }
     50% {
-      transform: rotate(-2deg);
-    }
-    65% {
-      transform: rotate(1deg);
-    }
-    80% {
-      transform: rotate(-1deg);
+      transform: rotate(4deg);
     }
     100% {
-      transform: rotate(0deg);
+      transform: rotate(-4deg);
     }
   }
 
-  @-webkit-keyframes hatch {
+  @-webkit-keyframes tossing {
     0% {
-      -webkit-transform: rotate(0deg) scaleY(0.6);
-    }
-    20% {
-      -webkit-transform: rotate(-2deg) scaleY(1.05);
-    }
-    35% {
-      -webkit-transform: rotate(2deg) scaleY(1);
+      -webkit-transform: rotate(-4deg);
     }
     50% {
-      -webkit-transform: rotate(-2deg);
-    }
-    65% {
-      -webkit-transform: rotate(1deg);
-    }
-    80% {
-      -webkit-transform: rotate(-1deg);
+      -webkit-transform: rotate(4deg);
     }
     100% {
-      -webkit-transform: rotate(0deg);
+      -webkit-transform: rotate(-4deg);
     }
   }
 `;
