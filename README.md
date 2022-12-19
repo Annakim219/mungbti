@@ -2,9 +2,9 @@
 
 예비 멍집사와 멍멍이의 궁합을 알아보는 mbti test
 ## 배포링크 : https://mungbti.netlify.app/
-<img width="948" alt="스크린샷 2022-12-19 오후 3 38 18" src="https://user-images.githubusercontent.com/97003692/208363300-042a0c77-2f11-4919-ad3d-d8cf166b8c10.png">
-<img width="948" alt="스크린샷 2022-12-19 오후 3 37 41" src="https://user-images.githubusercontent.com/97003692/208363309-adfb33d0-bfd5-41dd-8e83-534715d6ad10.png">
-<img width="948" alt="스크린샷 2022-12-19 오후 3 37 25" src="https://user-images.githubusercontent.com/97003692/208363321-db5c5daa-50a0-4754-b232-49764604f888.png">
+<img width="600" alt="스크린샷 2022-12-19 오후 3 37 25" src="https://user-images.githubusercontent.com/97003692/208363321-db5c5daa-50a0-4754-b232-49764604f888.png">
+<img width="600" alt="스크린샷 2022-12-19 오후 3 37 41" src="https://user-images.githubusercontent.com/97003692/208363309-adfb33d0-bfd5-41dd-8e83-534715d6ad10.png">
+<img width="600" alt="스크린샷 2022-12-19 오후 3 38 18" src="https://user-images.githubusercontent.com/97003692/208363300-042a0c77-2f11-4919-ad3d-d8cf166b8c10.png">
 
 ---
 
