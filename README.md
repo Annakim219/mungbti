@@ -11,6 +11,7 @@
 - REST API 요청 및 응답 : axios
 - 아이콘 : react-icons
 - 라우팅 및 리다이렉트 : react-router-dom
+- 기타 : bootstrap
 
 ## 실행 방법
 
